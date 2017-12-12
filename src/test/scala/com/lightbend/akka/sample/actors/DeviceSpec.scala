@@ -22,7 +22,6 @@ class DeviceSpec(_system: ActorSystem)
     response.value should ===(None)
   }
 
-
   "A Device Actor" should "reply with latest temperature reading" in {
     val probe = TestProbe()
     val deviceActor = system.actorOf(Device.props("group", "device"))
@@ -44,7 +43,5 @@ class DeviceSpec(_system: ActorSystem)
     response2.requestId should ===(4)
     response2.value should ===(Some(55.0))
   }
-
-
 
 }
