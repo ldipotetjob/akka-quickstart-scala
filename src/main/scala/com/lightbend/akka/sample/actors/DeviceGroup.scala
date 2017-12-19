@@ -7,6 +7,19 @@ import com.lightbend.akka.sample.actors.queries.DeviceGroupQuery
 
 import scala.concurrent.duration._
 
+/**
+  *
+  * requestId: As it's name indicate it is the id of who make the request
+  *
+  * groupId: As it's name indicate is the name of the group, an in our case each group
+  * correspond to a group of house in the same neighborhood.
+  *
+  * deviceId: As it's name indicate is the deviceId, correspond to a unique device. That means for example:
+  * for groupId1 there are deviceId1.1,deviceId1.1..deviceId1.n that represent sensors in house number 1
+  *
+  */
+
+
 object DeviceGroup {
   def props(groupId: String): Props = Props(new DeviceGroup(groupId))
 
@@ -24,7 +37,10 @@ object DeviceGroup {
 }
 
 class DeviceGroup(groupId: String) extends Actor with ActorLogging {
+
+  /** Maps that contains all devices registered in our System with the reference IdDevice => ActorReference*/
   var deviceIdToActor = Map.empty[String, ActorRef]
+  /** Maps that contains all devices registered in our System with the reference ActorReference => IdDevice*/
   var actorToDeviceId = Map.empty[ActorRef, String]
 
   var nextCollectionId = 0L
@@ -35,7 +51,7 @@ class DeviceGroup(groupId: String) extends Actor with ActorLogging {
   override def postStop(): Unit = log.info("DeviceGroup {} stopped", groupId)
 
   override def receive: Receive = {
-    case trackMsg @ RequestTrackDevice(`groupId`, _) ⇒
+    case trackMsg @ RequestTrackDevice(`groupId`, _) =>
       deviceIdToActor.get(trackMsg.deviceId) match {
         case Some(deviceActor) ⇒
           deviceActor forward trackMsg
@@ -54,16 +70,16 @@ class DeviceGroup(groupId: String) extends Actor with ActorLogging {
         groupId, this.groupId
       )
 
-    case RequestDeviceList(requestId) ⇒
+    case RequestDeviceList(requestId) =>
       sender() ! ReplyDeviceList(requestId, deviceIdToActor.keySet)
 
-    case Terminated(deviceActor) ⇒
+    case Terminated(deviceActor) =>
       val deviceId = actorToDeviceId(deviceActor)
       log.info("Device actor for {} has been terminated", deviceId)
       actorToDeviceId -= deviceActor
       deviceIdToActor -= deviceId
 
-    case RequestAllTemperatures(requestId) ⇒
+    case RequestAllTemperatures(requestId) =>
       context.actorOf(DeviceGroupQuery.props(
         actorToDeviceId = actorToDeviceId,
         requestId = requestId,

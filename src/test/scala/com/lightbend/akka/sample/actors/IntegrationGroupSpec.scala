@@ -41,7 +41,7 @@ class IntegrationGroupSpec (_system: ActorSystem)
     probe.expectMsg(Device.TemperatureRecorded(requestId = 1))
     // No temperature for device3
 
-    groupActor!DeviceGroup.RequestAllTemperatures(requestId = 0)
+    //groupActor!DeviceGroup.RequestAllTemperatures(requestId = 0)
 
     groupActor.tell(DeviceGroup.RequestAllTemperatures(requestId = 0), probe.ref)
     probe.expectMsg(
