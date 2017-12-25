@@ -12,7 +12,7 @@ The idea is that **each house can have several sensors devices** and should be p
 
 ## The are a lot of project that help to comunicate with house automation sensors device: ##
 
-* [Calimero project] (http://calimero-project.github.io)
+* [Calimero project](http://calimero-project.github.io)
 
 
 
