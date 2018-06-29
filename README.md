@@ -5,8 +5,7 @@
 
 This project implement [the akka example of InternetOf Things](https://doc.akka.io/docs/akka/current/guide/tutorial_1.html)
 
-The idea is that **each house can have several sensors devices** and should be possible get/set values in each device. Each house must have a **Network Connection Component (NCC)** who must allow connect the sensor device with Internet.
-
+The idea is that **each house can has several sensors devices** and should be possible get/set values in each device. Each house must have a **Network Connection Component (NCC)** who must allow connect the sensor device to Internet.
 
 # how connect java via KNX protocols #
 
