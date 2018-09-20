@@ -17,9 +17,8 @@ object BootNotScheduled extends App with ScalaLogger{
       Nil
   }
 
-  // This actor will control the whole System ("Daemon_Not_Scheduled")
+  // This actor will control the whole System ("IoTDaemon_Not_Scheduled")
   val system = ActorSystem(ConstantsObject.NotScheduledIoTDaemon)
-  // The actor system that will control the whole system.
   val ioTAdmin = system.actorOf(IoTAdmin.props, ConstantsObject.NotScheduledIoTDaemonProcessing)
   val filteredAndOrderedList = moviePageBoundaries.toSet.toList.sorted
   val filteredAndOrderedListGamesBoundaries = (filteredAndOrderedList.head to filteredAndOrderedList.last).toList
