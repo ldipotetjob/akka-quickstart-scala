@@ -8,7 +8,7 @@ of allways work in a multimodules environments.
 
 # Implementation of akka-quartz-scheduler in a cron service problem #
 
-What is my problem?: I have several tasks that need to execute following an specific schedule and **with different parameters every time that be executed**. There are not periodical tasks but I know that for example every sunday or every week someone will publish when I have to execute our tasks.
+What is my problem?: I have several tasks that need to execute following an specific schedule and **with different parameters every time that be executed**. There are not periodical tasks but I know that for example every sunday or every week someone will publish when I have to execute our tasks. In our example we are going to inspect an url about films and tv series *http://mejorenvo.com/*. So we can review a fixed amount of page or schedule inspect page those days that we know that company is planning to add new film pages.
 
 ## What will you find in the Implementation of akka-quartz-scheduler ? ##
 
@@ -35,12 +35,8 @@ What is my problem?: I have several tasks that need to execute following an spec
 * clone repository
 * go to root project
 * type in your terminal:
-    - ddd
-
-
-
-
-sbt "AkkaSchedulerPoc/runMain com.ldg.BootNotScheduled 1 5"
+    - **sbt "AkkaSchedulerPoc/runMain com.ldg.BootNotScheduled 1 5"** . Description: It will let you review from page 1 to page 5 and then ends all process.
+    - **sbt "AkkaSchedulerPoc/runMain com.ldg.BootScheduled"** . Description: You have to configurate the pages that you want to review and when you want to do it.Every thing in an external configuration file (root/akka-quickstart-scala/scriptsdb/cronmoviepages.conf)
 
 ## Full implementation of akka example of Internet of Things ##
 
