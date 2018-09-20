@@ -1,5 +1,6 @@
 <img width="928" alt="captura de pantalla 2017-10-07 a las 15 09 49" src="https://user-images.githubusercontent.com/8100363/31313078-665da9a6-abcf-11e7-9266-932880ea6ed2.png">
 
+<<<<<<< HEAD
 # Implementation akka-quartz-scheduler and Internet of things #
 This is a multimodule project it include two modules that can live separated but I want to give you the idea 
 of allways work in a multimodules environments.
@@ -51,10 +52,25 @@ between sensors devices and users I will use java libraries for let Akka libarri
 
 
 ## The java libraries that implement KNX protocol and will let to talk with sensors device: ##
+=======
+
+# akka-libraries-scala #
+
+This project implement [the akka example of InternetOf Things](https://doc.akka.io/docs/akka/current/guide/tutorial_1.html)
+
+The idea is that **each house can has several sensors devices** and should be possible get/set values in each device. Each house must have a **Network Connection Component (NCC)** who must allow connect the sensor device to Internet.
+
+# how connect java via KNX protocols #
+
+## The are a lot of project that help to comunicate with house automation sensors device: ##
+>>>>>>> 3522a2a5d5ff028feed50bee2dd23e7be9bacecb
 
 * [Calimero project](http://calimero-project.github.io)
 
 
 
 ![myimage-alt-tag](https://github.com/ldipotetjob/akka-quickstart-scala/blob/master/images/IoTImage.jpg)
+<<<<<<< HEAD
 *Copyright of My Children (Mariela and Samuel)*
+=======
+>>>>>>> 3522a2a5d5ff028feed50bee2dd23e7be9bacecb
