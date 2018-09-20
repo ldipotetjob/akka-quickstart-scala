@@ -1,6 +1,5 @@
 <img width="928" alt="captura de pantalla 2017-10-07 a las 15 09 49" src="https://user-images.githubusercontent.com/8100363/31313078-665da9a6-abcf-11e7-9266-932880ea6ed2.png">
 
-<<<<<<< HEAD
 # Implementation akka-quartz-scheduler and Internet of things #
 This is a multimodule project it include two modules that can live separated but I want to give you the idea 
 of allways work in a multimodules environments.
