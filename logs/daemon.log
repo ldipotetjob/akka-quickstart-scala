@@ -1,0 +1,286 @@
+2018-09-20 01:05:23.164[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2018-09-20 01:05:23.173[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2018-09-20 01:05:23.178[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - Default Loggers started
+2018-09-20 01:05:23.210[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  com.ldg.actors.IoTAdmin - Start process in Akka Scheduler Example
+2018-09-20 01:05:23.211[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine started
+2018-09-20 01:05:23.232[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Configured Schedules: Map(MOVIEPAGES -> com.typesafe.akka.extension.quartz.QuartzCronSchedule@5c31beb3)
+2018-09-20 01:05:23.251[run-main-0] INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-20 01:05:23.252[run-main-0] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.3 created.
+2018-09-20 01:05:23.255[run-main-0] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2018-09-20 01:05:23.256[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'QuartzScheduler~IotAdmin_Scheduled' with instanceId 'IotAdmin_Scheduled'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 1 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-20 01:05:23.256[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler 'QuartzScheduler~IotAdmin_Scheduled
+2018-09-20 01:05:23.256[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler version: 2.2.3
+2018-09-20 01:05:23.258[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Initialized a Quartz Scheduler 'org.quartz.impl.StdScheduler@4ab8f798'
+2018-09-20 01:05:23.258[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled started.
+2018-09-20 01:05:23.259[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:05:23.264[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  c.t.a.e.q.QuartzSchedulerExtension - Setting up scheduled job 'moviepages', with 'com.typesafe.akka.extension.quartz.QuartzCronSchedule@5c31beb3'
+2018-09-20 01:05:23.270[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Adding jobKey DEFAULT.moviepages_Job to runningJobs map.
+2018-09-20 01:05:23.273[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Building Trigger with startDate 'Thu Sep 20 01:05:23 BST 2018
+2018-09-20 01:05:23.279[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Scheduling Job 'JobDetail 'DEFAULT.moviepages_Job':  jobClass: 'com.typesafe.akka.extension.quartz.SimpleActorMessageJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false' and Trigger 'Trigger 'DEFAULT.moviepages_Trigger':  triggerClass: 'org.quartz.impl.triggers.CronTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null'. Is Scheduler Running? true
+2018-09-20 01:05:23.282[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:05:48.116[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:06:15.949[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:06:43.942[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:07:07.685[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:07:30.743[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:07:57.951[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:08:25.020[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:08:50.106[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:09:16.758[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:09:45.760[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:10:09.640[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:10:32.658[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:10:59.735[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:11:27.796[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:11:54.260[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:12:22.810[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:12:48.315[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:13:17.156[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:13:44.084[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] INFO  akka.actor.CoordinatedShutdown - Starting coordinated shutdown from JVM shutdown hook
+2018-09-20 01:13:44.092[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-service-unbind] with [0] tasks
+2018-09-20 01:13:44.099[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-unbind] with [0] tasks
+2018-09-20 01:13:44.099[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-requests-done] with [0] tasks
+2018-09-20 01:13:44.100[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-stop] with [0] tasks
+2018-09-20 01:13:44.100[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-cluster-shutdown] with [0] tasks
+2018-09-20 01:13:44.100[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-sharding-shutdown-region] with [0] tasks
+2018-09-20 01:13:44.101[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-leave] with [0] tasks
+2018-09-20 01:13:44.102[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting] with [0] tasks
+2018-09-20 01:13:44.102[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting-done] with [0] tasks
+2018-09-20 01:13:44.102[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-shutdown] with [0] tasks
+2018-09-20 01:13:44.103[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-actor-system-terminate] with [0] tasks
+2018-09-20 01:13:44.103[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [actor-system-terminate] with [1] tasks: [terminate-system]
+2018-09-20 01:13:44.121[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
+2018-09-20 01:13:44.121[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine stopped
+2018-09-20 01:13:44.123[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2018-09-20 01:13:44.130[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutting down.
+2018-09-20 01:13:44.130[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled paused.
+2018-09-20 01:13:44.130[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] DEBUG org.quartz.simpl.SimpleThreadPool - Shutting down threadpool...
+2018-09-20 01:13:44.130[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] DEBUG org.quartz.simpl.SimpleThreadPool - Shutdown of threadpool complete.
+2018-09-20 01:13:44.130[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutdown complete.
+2018-09-20 01:15:44.722[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2018-09-20 01:15:44.731[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2018-09-20 01:15:44.735[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - Default Loggers started
+2018-09-20 01:15:44.767[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  com.ldg.actors.IoTAdmin - Start process in Akka Scheduler Example
+2018-09-20 01:15:44.768[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine started
+2018-09-20 01:15:44.790[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Configured Schedules: Map(MOVIEPAGES -> com.typesafe.akka.extension.quartz.QuartzCronSchedule@66731aa0)
+2018-09-20 01:15:44.810[run-main-0] INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-20 01:15:44.810[run-main-0] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.3 created.
+2018-09-20 01:15:44.812[run-main-0] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2018-09-20 01:15:44.813[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'QuartzScheduler~IotAdmin_Scheduled' with instanceId 'IotAdmin_Scheduled'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 1 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-20 01:15:44.814[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler 'QuartzScheduler~IotAdmin_Scheduled
+2018-09-20 01:15:44.814[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler version: 2.2.3
+2018-09-20 01:15:44.816[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Initialized a Quartz Scheduler 'org.quartz.impl.StdScheduler@2339306c'
+2018-09-20 01:15:44.817[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled started.
+2018-09-20 01:15:44.817[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:15:44.823[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  c.t.a.e.q.QuartzSchedulerExtension - Setting up scheduled job 'moviepages', with 'com.typesafe.akka.extension.quartz.QuartzCronSchedule@66731aa0'
+2018-09-20 01:15:44.828[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Adding jobKey DEFAULT.moviepages_Job to runningJobs map.
+2018-09-20 01:15:44.831[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Building Trigger with startDate 'Thu Sep 20 01:15:44 BST 2018
+2018-09-20 01:15:44.837[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Scheduling Job 'JobDetail 'DEFAULT.moviepages_Job':  jobClass: 'com.typesafe.akka.extension.quartz.SimpleActorMessageJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false' and Trigger 'Trigger 'DEFAULT.moviepages_Trigger':  triggerClass: 'org.quartz.impl.triggers.CronTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null'. Is Scheduler Running? true
+2018-09-20 01:15:44.839[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:16:09.578[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:16:37.196[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:17:06.803[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:17:30.340[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:17:56.960[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:18:25.925[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:18:54.753[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:19:21.345[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:19:44.400[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:20:03.152[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  akka.actor.CoordinatedShutdown - Starting coordinated shutdown from JVM shutdown hook
+2018-09-20 01:20:03.161[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-service-unbind] with [0] tasks
+2018-09-20 01:20:03.168[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-unbind] with [0] tasks
+2018-09-20 01:20:03.168[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-requests-done] with [0] tasks
+2018-09-20 01:20:03.168[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-stop] with [0] tasks
+2018-09-20 01:20:03.169[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-cluster-shutdown] with [0] tasks
+2018-09-20 01:20:03.169[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-sharding-shutdown-region] with [0] tasks
+2018-09-20 01:20:03.170[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-leave] with [0] tasks
+2018-09-20 01:20:03.170[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting] with [0] tasks
+2018-09-20 01:20:03.170[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting-done] with [0] tasks
+2018-09-20 01:20:03.171[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-shutdown] with [0] tasks
+2018-09-20 01:20:03.171[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-actor-system-terminate] with [0] tasks
+2018-09-20 01:20:03.172[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG akka.actor.CoordinatedShutdown - Performing phase [actor-system-terminate] with [1] tasks: [terminate-system]
+2018-09-20 01:20:03.179[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
+2018-09-20 01:20:03.180[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine stopped
+2018-09-20 01:20:03.190[IotAdmin_Scheduled-akka.actor.default-dispatcher-8] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2018-09-20 01:20:03.197[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutting down.
+2018-09-20 01:20:03.197[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled paused.
+2018-09-20 01:20:03.197[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG org.quartz.simpl.SimpleThreadPool - Shutting down threadpool...
+2018-09-20 01:20:03.197[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG org.quartz.simpl.SimpleThreadPool - Shutdown of threadpool complete.
+2018-09-20 01:20:03.198[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutdown complete.
+2018-09-20 01:21:12.357[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2018-09-20 01:21:12.365[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2018-09-20 01:21:12.371[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - Default Loggers started
+2018-09-20 01:21:12.406[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine started
+2018-09-20 01:21:12.409[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - Start process in Akka Scheduler Example
+2018-09-20 01:21:12.433[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Configured Schedules: Map(MOVIEPAGES -> com.typesafe.akka.extension.quartz.QuartzCronSchedule@2d3cba78)
+2018-09-20 01:21:12.452[run-main-0] INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-20 01:21:12.452[run-main-0] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.3 created.
+2018-09-20 01:21:12.455[run-main-0] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2018-09-20 01:21:12.456[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'QuartzScheduler~IotAdmin_Scheduled' with instanceId 'IotAdmin_Scheduled'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 1 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-20 01:21:12.456[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler 'QuartzScheduler~IotAdmin_Scheduled
+2018-09-20 01:21:12.456[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler version: 2.2.3
+2018-09-20 01:21:12.457[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Initialized a Quartz Scheduler 'org.quartz.impl.StdScheduler@273903ae'
+2018-09-20 01:21:12.457[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled started.
+2018-09-20 01:21:12.458[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:21:12.463[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] INFO  c.t.a.e.q.QuartzSchedulerExtension - Setting up scheduled job 'moviepages', with 'com.typesafe.akka.extension.quartz.QuartzCronSchedule@2d3cba78'
+2018-09-20 01:21:12.469[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Adding jobKey DEFAULT.moviepages_Job to runningJobs map.
+2018-09-20 01:21:12.472[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Building Trigger with startDate 'Thu Sep 20 01:21:12 BST 2018
+2018-09-20 01:21:12.480[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Scheduling Job 'JobDetail 'DEFAULT.moviepages_Job':  jobClass: 'com.typesafe.akka.extension.quartz.SimpleActorMessageJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false' and Trigger 'Trigger 'DEFAULT.moviepages_Trigger':  triggerClass: 'org.quartz.impl.triggers.CronTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null'. Is Scheduler Running? true
+2018-09-20 01:21:12.484[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:21:38.107[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:22:02.768[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:22:31.346[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 1 triggers
+2018-09-20 01:23:00.008[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.q.simpl.PropertySettingJobFactory - Producing instance of Job 'DEFAULT.moviepages_Job', class=com.typesafe.akka.extension.quartz.SimpleActorMessageJob
+2018-09-20 01:23:00.015[AKKA_QRTZ_-1] DEBUG org.quartz.core.JobRunShell - Calling execute on job DEFAULT.moviepages_Job
+2018-09-20 01:23:00.017[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG c.t.a.e.quartz.SimpleActorMessageJob - Triggering job 'moviepages_Job', sending 'FireSchedule(Actor[akka://IotAdmin_Scheduled/user/Daemon_moviepage_processing#1010649798])' to 'Actor[akka://IotAdmin_Scheduled/user/ReScheduling_processMoviePage#434626974]'
+2018-09-20 01:23:00.018[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:23:00.024[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.ReSchedulingJob - Programming Schedule for cronexpression: 0 25 1 20 9 ? * including matches: 40-41
+2018-09-20 01:23:00.026[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] WARN  c.t.a.e.q.QuartzSchedulerExtension - No running Job named 'Movie-Page-Scheduler40' found: Cannot cancel
+2018-09-20 01:23:00.027[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:23:00.027[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  c.t.a.e.q.QuartzSchedulerExtension - Setting up scheduled job 'Movie-Page-Scheduler40', with 'com.typesafe.akka.extension.quartz.QuartzCronSchedule@70f6a1d6'
+2018-09-20 01:23:00.027[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Adding jobKey DEFAULT.Movie-Page-Scheduler40_Job to runningJobs map.
+2018-09-20 01:23:00.027[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Building Trigger with startDate 'Thu Sep 20 01:23:00 BST 2018
+2018-09-20 01:23:00.027[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Scheduling Job 'JobDetail 'DEFAULT.Movie-Page-Scheduler40_Job':  jobClass: 'com.typesafe.akka.extension.quartz.SimpleActorMessageJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false' and Trigger 'Trigger 'DEFAULT.Movie-Page-Scheduler40_Trigger':  triggerClass: 'org.quartz.impl.triggers.CronTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null'. Is Scheduler Running? true
+2018-09-20 01:23:00.028[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.ReSchedulingJob - schedule get new MoviePages
+2018-09-20 01:23:28.684[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:23:55.824[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:24:19.123[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:24:47.113[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 1 triggers
+2018-09-20 01:25:00.003[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.q.simpl.PropertySettingJobFactory - Producing instance of Job 'DEFAULT.Movie-Page-Scheduler40_Job', class=com.typesafe.akka.extension.quartz.SimpleActorMessageJob
+2018-09-20 01:25:00.003[AKKA_QRTZ_-1] DEBUG org.quartz.core.JobRunShell - Calling execute on job DEFAULT.Movie-Page-Scheduler40_Job
+2018-09-20 01:25:00.004[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:25:00.004[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG c.t.a.e.quartz.SimpleActorMessageJob - Triggering job 'Movie-Page-Scheduler40_Job', sending 'ParseUrlFilms(List(40, 41),None)' to 'Actor[akka://IotAdmin_Scheduled/user/Daemon_moviepage_processing#1010649798]'
+2018-09-20 01:25:02.532[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p40.html
+2018-09-20 01:25:02.622[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p41.html
+2018-09-20 01:25:02.624[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  com.ldg.actors.IOTask - Start IOTask process
+2018-09-20 01:25:02.625[IotAdmin_Scheduled-akka.actor.default-dispatcher-7] INFO  com.ldg.actors.IOTask - Stop IOTask process
+2018-09-20 01:25:02.632[IotAdmin_Scheduled-akka.actor.default-dispatcher-8] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine stopped
+2018-09-20 01:25:02.635[IotAdmin_Scheduled-akka.actor.default-dispatcher-8] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
+2018-09-20 01:25:02.641[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2018-09-20 01:25:02.650[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutting down.
+2018-09-20 01:25:02.650[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled paused.
+2018-09-20 01:25:02.650[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG org.quartz.simpl.SimpleThreadPool - Shutting down threadpool...
+2018-09-20 01:25:02.650[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG org.quartz.simpl.SimpleThreadPool - Shutdown of threadpool complete.
+2018-09-20 01:25:02.651[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutdown complete.
+2018-09-20 01:25:02.670[AKKA_QRTZ_-1] ERROR org.quartz.simpl.SimpleThreadPool - Worker thread was interrupt()'ed.
+java.lang.InterruptedException: null
+	at java.lang.Object.wait(Native Method)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2018-09-20 01:25:02.670[AKKA_QRTZ_-1] DEBUG org.quartz.simpl.SimpleThreadPool - WorkerThread is shut down.
+2018-09-20 01:59:14.453[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2018-09-20 01:59:14.459[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2018-09-20 01:59:14.462[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - Default Loggers started
+2018-09-20 01:59:14.483[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine started
+2018-09-20 01:59:14.483[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - Start process in Akka Scheduler Example
+2018-09-20 01:59:14.502[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Configured Schedules: Map(MOVIEPAGES -> com.typesafe.akka.extension.quartz.QuartzCronSchedule@70f5247f)
+2018-09-20 01:59:14.522[run-main-0] INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-20 01:59:14.523[run-main-0] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.3 created.
+2018-09-20 01:59:14.526[run-main-0] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2018-09-20 01:59:14.528[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'QuartzScheduler~IotAdmin_Scheduled' with instanceId 'IotAdmin_Scheduled'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 1 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-20 01:59:14.529[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler 'QuartzScheduler~IotAdmin_Scheduled
+2018-09-20 01:59:14.529[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler version: 2.2.3
+2018-09-20 01:59:14.530[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Initialized a Quartz Scheduler 'org.quartz.impl.StdScheduler@1f31dfe1'
+2018-09-20 01:59:14.530[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled started.
+2018-09-20 01:59:14.530[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:59:14.536[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  c.t.a.e.q.QuartzSchedulerExtension - Setting up scheduled job 'moviepages', with 'com.typesafe.akka.extension.quartz.QuartzCronSchedule@70f5247f'
+2018-09-20 01:59:14.543[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Adding jobKey DEFAULT.moviepages_Job to runningJobs map.
+2018-09-20 01:59:14.548[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Building Trigger with startDate 'Thu Sep 20 01:59:14 BST 2018
+2018-09-20 01:59:14.553[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Scheduling Job 'JobDetail 'DEFAULT.moviepages_Job':  jobClass: 'com.typesafe.akka.extension.quartz.SimpleActorMessageJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false' and Trigger 'Trigger 'DEFAULT.moviepages_Trigger':  triggerClass: 'org.quartz.impl.triggers.CronTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null'. Is Scheduler Running? true
+2018-09-20 01:59:14.555[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 01:59:44.540[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:00:09.455[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:00:34.999[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:01:03.837[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:01:32.608[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 1 triggers
+2018-09-20 02:02:00.012[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.q.simpl.PropertySettingJobFactory - Producing instance of Job 'DEFAULT.moviepages_Job', class=com.typesafe.akka.extension.quartz.SimpleActorMessageJob
+2018-09-20 02:02:00.019[AKKA_QRTZ_-1] DEBUG org.quartz.core.JobRunShell - Calling execute on job DEFAULT.moviepages_Job
+2018-09-20 02:02:00.021[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG c.t.a.e.quartz.SimpleActorMessageJob - Triggering job 'moviepages_Job', sending 'FireSchedule(Actor[akka://IotAdmin_Scheduled/user/Daemon_moviepage_processing#-1441185304])' to 'Actor[akka://IotAdmin_Scheduled/user/ReScheduling_processMoviePage#1675983035]'
+2018-09-20 02:02:00.022[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:02:00.026[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.ReSchedulingJob - Programming Schedule for cronexpression: 0 4 2 20 9 ? * including matches: 40-41
+2018-09-20 02:02:00.028[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] WARN  c.t.a.e.q.QuartzSchedulerExtension - No running Job named 'Movie-Page-Scheduler40' found: Cannot cancel
+2018-09-20 02:02:00.028[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] INFO  c.t.a.e.q.QuartzSchedulerExtension - Setting up scheduled job 'Movie-Page-Scheduler40', with 'com.typesafe.akka.extension.quartz.QuartzCronSchedule@9a57c70'
+2018-09-20 02:02:00.028[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Adding jobKey DEFAULT.Movie-Page-Scheduler40_Job to runningJobs map.
+2018-09-20 02:02:00.029[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Building Trigger with startDate 'Thu Sep 20 02:02:00 BST 2018
+2018-09-20 02:02:00.029[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:02:00.029[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Scheduling Job 'JobDetail 'DEFAULT.Movie-Page-Scheduler40_Job':  jobClass: 'com.typesafe.akka.extension.quartz.SimpleActorMessageJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false' and Trigger 'Trigger 'DEFAULT.Movie-Page-Scheduler40_Trigger':  triggerClass: 'org.quartz.impl.triggers.CronTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null'. Is Scheduler Running? true
+2018-09-20 02:02:00.030[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.ReSchedulingJob - schedule get new MoviePages
+2018-09-20 02:02:28.025[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:02:53.093[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:03:21.709[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:03:49.939[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 1 triggers
+2018-09-20 02:04:00.007[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.q.simpl.PropertySettingJobFactory - Producing instance of Job 'DEFAULT.Movie-Page-Scheduler40_Job', class=com.typesafe.akka.extension.quartz.SimpleActorMessageJob
+2018-09-20 02:04:00.008[AKKA_QRTZ_-1] DEBUG org.quartz.core.JobRunShell - Calling execute on job DEFAULT.Movie-Page-Scheduler40_Job
+2018-09-20 02:04:00.008[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:04:00.009[IotAdmin_Scheduled-akka.actor.default-dispatcher-5] DEBUG c.t.a.e.quartz.SimpleActorMessageJob - Triggering job 'Movie-Page-Scheduler40_Job', sending 'ParseUrlFilms(List(40, 41),None)' to 'Actor[akka://IotAdmin_Scheduled/user/Daemon_moviepage_processing#-1441185304]'
+2018-09-20 02:04:03.122[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p41.html
+2018-09-20 02:04:03.122[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p40.html
+2018-09-20 02:04:03.135[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  com.ldg.actors.IOTask - Start IOTask process
+2018-09-20 02:04:03.136[IotAdmin_Scheduled-akka.actor.default-dispatcher-7] INFO  com.ldg.actors.IOTask - Stop IOTask process
+2018-09-20 02:04:03.143[IotAdmin_Scheduled-akka.actor.default-dispatcher-7] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
+2018-09-20 02:04:27.799[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:04:51.516[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:05:20.630[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:05:50.364[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:06:16.348[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:06:41.665[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2018-09-20 02:06:44.858[IotAdmin_Scheduled-akka.actor.default-dispatcher-8] INFO  akka.actor.CoordinatedShutdown - Starting coordinated shutdown from JVM shutdown hook
+2018-09-20 02:06:44.860[IotAdmin_Scheduled-akka.actor.default-dispatcher-8] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-service-unbind] with [0] tasks
+2018-09-20 02:06:44.869[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-unbind] with [0] tasks
+2018-09-20 02:06:44.869[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-requests-done] with [0] tasks
+2018-09-20 02:06:44.869[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-stop] with [0] tasks
+2018-09-20 02:06:44.869[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-cluster-shutdown] with [0] tasks
+2018-09-20 02:06:44.869[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-sharding-shutdown-region] with [0] tasks
+2018-09-20 02:06:44.870[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-leave] with [0] tasks
+2018-09-20 02:06:44.870[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting] with [0] tasks
+2018-09-20 02:06:44.870[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting-done] with [0] tasks
+2018-09-20 02:06:44.871[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-shutdown] with [0] tasks
+2018-09-20 02:06:44.871[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-actor-system-terminate] with [0] tasks
+2018-09-20 02:06:44.871[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.actor.CoordinatedShutdown - Performing phase [actor-system-terminate] with [1] tasks: [terminate-system]
+2018-09-20 02:06:44.872[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine stopped
+2018-09-20 02:06:44.873[IotAdmin_Scheduled-akka.actor.default-dispatcher-9] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2018-09-20 02:06:44.883[IotAdmin_Scheduled-akka.actor.default-dispatcher-11] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutting down.
+2018-09-20 02:06:44.883[IotAdmin_Scheduled-akka.actor.default-dispatcher-11] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled paused.
+2018-09-20 02:06:44.883[IotAdmin_Scheduled-akka.actor.default-dispatcher-11] DEBUG org.quartz.simpl.SimpleThreadPool - Shutting down threadpool...
+2018-09-20 02:06:44.884[IotAdmin_Scheduled-akka.actor.default-dispatcher-11] DEBUG org.quartz.simpl.SimpleThreadPool - Shutdown of threadpool complete.
+2018-09-20 02:06:44.884[IotAdmin_Scheduled-akka.actor.default-dispatcher-11] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutdown complete.
+2018-09-20 14:05:38.633[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2018-09-20 14:05:38.642[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2018-09-20 14:05:38.647[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - Default Loggers started
+2018-09-20 14:05:38.677[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - Start process in Akka Scheduler Example
+2018-09-20 14:05:40.730[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p2.html
+2018-09-20 14:05:40.731[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p4.html
+2018-09-20 14:05:40.740[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p1.html
+2018-09-20 14:05:40.913[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p3.html
+2018-09-20 14:05:41.137[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p5.html
+2018-09-20 14:05:41.140[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IOTask - Start IOTask process
+2018-09-20 14:05:41.140[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IOTask - Stop IOTask process
+2018-09-20 14:05:41.150[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
+2018-09-20 14:05:41.155[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
