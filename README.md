@@ -52,7 +52,7 @@ between sensors devices and users I will use java libraries for let Akka libarri
 
 
 ## The java libraries that implement KNX protocol and will let to talk with sensors device: ##
-=======
+
 
 # akka-libraries-scala #
 
@@ -63,14 +63,11 @@ The idea is that **each house can has several sensors devices** and should be po
 # how connect java via KNX protocols #
 
 ## The are a lot of project that help to comunicate with house automation sensors device: ##
->>>>>>> 3522a2a5d5ff028feed50bee2dd23e7be9bacecb
+
 
 * [Calimero project](http://calimero-project.github.io)
 
 
 
 ![myimage-alt-tag](https://github.com/ldipotetjob/akka-quickstart-scala/blob/master/images/IoTImage.jpg)
-<<<<<<< HEAD
 *Copyright of My Children (Mariela and Samuel)*
-=======
->>>>>>> 3522a2a5d5ff028feed50bee2dd23e7be9bacecb
