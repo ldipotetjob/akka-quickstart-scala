@@ -1,0 +1,18 @@
+We have here the script for import automatically csv file to a Cassandra Database
+
+
+====================<## https://github.com/enragedginger/akka-quartz-scheduler>=========================
+
+We will add 2 cron-configurations for test it later:
+
+ =====>
+
+ # https://github.com/lightbend/config/blob/master/HOCON.md
+ # cronexpresssion = "Seconds Minutes Hours Day-of-month Month Day-of-Week Year(Optional)"
+
+
+
+=====>
+
+# https://github.com/lightbend/config/blob/master/HOCON.md
+# cronexpresssion = "Seconds Minutes Hours Day-of-month Month Day-of-Week Year(Optional)"
