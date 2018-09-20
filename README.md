@@ -37,7 +37,7 @@ What is my problem?: I have several tasks that need to execute following an spec
 * go to root project
 * type in your terminal:
     - **sbt "AkkaSchedulerPoc/runMain com.ldg.BootNotScheduled 1 5"** . Description: It will let you review from page 1 to page 5 and then ends all process.
-    - **sbt "AkkaSchedulerPoc/runMain com.ldg.BootScheduled"** . Description: You have to configurate the pages that you want to review and when you want to do it.Every thing in an external configuration file (root/akka-quickstart-scala/scriptsdb/cronmoviepages.conf)
+    - **sbt "AkkaSchedulerPoc/runMain com.ldg.BootScheduled"** . Description: You have to configurate the pages to review and when it must be done. Every thing in an external configuration file (root/akka-quickstart-scala/scriptsdb/cronmoviepages.conf)
 
 ## Full implementation of akka example of Internet of Things ##
 
