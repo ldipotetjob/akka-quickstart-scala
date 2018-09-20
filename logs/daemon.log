@@ -271,3 +271,16 @@ java.lang.InterruptedException: null
 2018-09-20 02:06:44.883[IotAdmin_Scheduled-akka.actor.default-dispatcher-11] DEBUG org.quartz.simpl.SimpleThreadPool - Shutting down threadpool...
 2018-09-20 02:06:44.884[IotAdmin_Scheduled-akka.actor.default-dispatcher-11] DEBUG org.quartz.simpl.SimpleThreadPool - Shutdown of threadpool complete.
 2018-09-20 02:06:44.884[IotAdmin_Scheduled-akka.actor.default-dispatcher-11] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutdown complete.
+2018-09-20 14:05:38.633[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2018-09-20 14:05:38.642[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2018-09-20 14:05:38.647[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - Default Loggers started
+2018-09-20 14:05:38.677[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - Start process in Akka Scheduler Example
+2018-09-20 14:05:40.730[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p2.html
+2018-09-20 14:05:40.731[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p4.html
+2018-09-20 14:05:40.740[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p1.html
+2018-09-20 14:05:40.913[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p3.html
+2018-09-20 14:05:41.137[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - An operation have done. moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p5.html
+2018-09-20 14:05:41.140[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IOTask - Start IOTask process
+2018-09-20 14:05:41.140[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IOTask - Stop IOTask process
+2018-09-20 14:05:41.150[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
+2018-09-20 14:05:41.155[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
