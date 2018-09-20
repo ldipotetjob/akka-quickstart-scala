@@ -7,6 +7,7 @@ of allways work in a multimodules environments.
 * Full implementation of [the akka example of InternetOf Things](https://doc.akka.io/docs/akka/current/guide/tutorial_1.html)
 
 # Implementation of akka-quartz-scheduler in a cron service problem #
+
 What is my problem?: I have several tasks that need to execute following an specific schedule and **with different parameters every time that be executed**. There are not periodical tasks but I know that for example every sunday or every week someone will publish when I have to execute our tasks.
 
 ## What will you find in the Implementation of akka-quartz-scheduler ? ##
@@ -21,11 +22,31 @@ What is my problem?: I have several tasks that need to execute following an spec
 * Implementation of Supervisor strategy.
 * Test module: This point we'll be interesting in the future. All code have been prepared for be tested in akka environment without mocking any value.
 
+## Requirements, Installation, Launching ##
+
+### Requirements ###
+
+* jdk 1.7+ -> how check java version: java -version
+* scala 2.11.x -> how check scala version: scala -version
+* sbt 0.13.11+ -> how check sbt version: sbt about
+
+### Installation and Launching ###
+
+* clone repository
+* go to root project
+* type in your terminal:
+    - ddd
+
+
+
+
+sbt "AkkaSchedulerPoc/runMain com.ldg.BootNotScheduled 1 5"
+
 ## Full implementation of akka example of Internet of Things ##
 
 This project implement [the akka example of InternetOf Things](https://doc.akka.io/docs/akka/current/guide/tutorial_1.html)
 The idea is that **each house can has several sensors devices** and should be possible get/set values in each device. Each house must have a **Network Connection Component (NCC)** who must allow connect the sensor device to Internet.
-The integration with [Calimero](http://calimero-project.github.io) is under construction. 
+**The integration with [Calimero](http://calimero-project.github.io) is under construction.** 
 
 ## Talking with sensors devices via KNX protocols ##
 
@@ -40,3 +61,4 @@ between sensors devices and users I will use java libraries for let Akka libarri
 
 
 ![myimage-alt-tag](https://github.com/ldipotetjob/akka-quickstart-scala/blob/master/images/IoTImage.jpg)
+*Copyright of My Children (Mariela and Samuel)*
