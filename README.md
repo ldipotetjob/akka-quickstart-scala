@@ -41,7 +41,7 @@ What is my problem?: I have several tasks that need to execute following an spec
 ## Implementation of akka example of Internet of Things ##
 
 This project implement [the akka example of InternetOf Things](https://doc.akka.io/docs/akka/current/guide/tutorial_1.html)
-The idea is that **each house can has several sensors devices** and should be possible get/set values in each device. Each house must have a **Network Connection Component (NCC)** who must allow connect the sensor device to Internet.
+The idea is that **each house can has several sensors devices** and should be possible get/set values in each device. Each house must have a **Network Connection Component (NCC)** It must allow connect the sensor device to Internet.
 **The integration with [Calimero](http://calimero-project.github.io) is under construction.** 
 
 ### Talking with sensors devices via KNX protocols ###
