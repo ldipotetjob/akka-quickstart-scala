@@ -8,8 +8,8 @@
 .idea
 .DS_Store
 /modules/**/target/
-
-
+logs
+/logs/*.log
 
 #we are in english: https://mojitoverdeintw.blogspot.com/
 #we are in spanish: https://mojitoverde.blogspot.com/
