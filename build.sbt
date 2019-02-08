@@ -1,3 +1,6 @@
+import BuildEnvPlugin.autoImport.{BuildEnv, buildEnv, configfilegenerator}
+
+
 lazy val commonSettings = Seq(
   name:= "akka-quickstart-scala",
   organization := "mojitoverde",
@@ -18,7 +21,7 @@ lazy val akkaVersion = "2.5.6"
 lazy val root = (project in file(".")).
   aggregate(internetOfThings).
   aggregate(AkkaSchedulerPoc).
-  settings(commonSettings: _*)
+  settings(commonSettings,commands ++= Seq(buildAll))
 
 lazy val internetOfThings = (project in file("modules/Iot")).
   settings(commonSettings)

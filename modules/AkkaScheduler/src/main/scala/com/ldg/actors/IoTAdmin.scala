@@ -7,6 +7,7 @@ import com.ldg.actors.ProcessMoviePage.ProccessPage
 import com.ldg.moviepages.VoMoviePages
 import com.ldg.utilities.MoviePageTypes.moviePage
 import com.ldg.utilities.{ConstantsObject, Result}
+import com.typesafe.config.ConfigFactory
 
 object IoTAdmin {
   case class ParseUrlFilms(listTitles: List[moviePage], actorRef: Option[ActorRef]=None)
@@ -46,6 +47,11 @@ class IoTAdmin extends Actor with ActorLogging with MessageToTargetActors{
 
   var watched = Map.empty[ActorRef, Int]
 
+  val conf = ConfigFactory.load()
+
+  val includeconf:String= conf.getString("akka.testinclude")
+
+
   override def receive = {
 
     case ParseUrlFilms(urlPageNunmList, optActorRef) =>
@@ -67,7 +73,7 @@ class IoTAdmin extends Actor with ActorLogging with MessageToTargetActors{
       parsedMoviePages.parsedPages match {
         case Result(_,Some(titlesMoviePage))=>
           log.info(
-            s"An operation have done. moviePageTitle:${titlesMoviePage.moviePageTitle} moviePageUrl:${titlesMoviePage.UrlPage}"
+            s"An operation have done. ${includeconf} moviePageTitle:${titlesMoviePage.moviePageTitle} moviePageUrl:${titlesMoviePage.UrlPage}"
           )
         case Result(Some(failErrorInMoviePage),_) =>
           log.error(
