@@ -1,5 +1,8 @@
-import BuildEnvPlugin.autoImport.{BuildEnv, buildEnv, configfilegenerator}
+import BuildEnvPlugin.autoImport.configfilegenerator
 
+import CommandAkkaScheduler.buildAll
+
+lazy val akkaVersion = "2.5.6"
 
 lazy val commonSettings = Seq(
   name:= "akka-quickstart-scala",
@@ -16,17 +19,15 @@ lazy val commonSettings = Seq(
   )
 )
 
-lazy val akkaVersion = "2.5.6"
+lazy val internetOfThings = (project in file("modules/Iot")).
+  settings(commonSettings)
 
 lazy val root = (project in file(".")).
   aggregate(internetOfThings).
   aggregate(AkkaSchedulerPoc).
   settings(commonSettings,commands ++= Seq(buildAll))
 
-lazy val internetOfThings = (project in file("modules/Iot")).
-  settings(commonSettings)
-
 lazy val AkkaSchedulerPoc = (project in file("modules/AkkaScheduler")).
   settings(commonSettings,libraryDependencies ++= Seq(
     "com.enragedginger" %% "akka-quartz-scheduler" % "1.6.1-akka-2.5.x"
- ))
+ ),resourceGenerators in Compile += configfilegenerator)

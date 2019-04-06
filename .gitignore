@@ -1,7 +1,7 @@
 ## Akka fixing documentation base project
 
 /project/target/
-/target/
+/target/*
 /.idea
 *.class
 /.idea/
