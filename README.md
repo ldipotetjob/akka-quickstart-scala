@@ -35,7 +35,24 @@ What is my problem?: I have several tasks that need to execute following an spec
 * clone repository
 * go to root project
 * type in your terminal:
-    - **sbt "AkkaSchedulerPoc/runMain com.ldg.BootNotScheduled 1 5"** . Description: It will let you review from page 1 to page 5 and then ends all process.
+    - **sbt "AkkaSchedulerPoc/runMain com.ldg.BootNotScheduled 1 5"** . Description: It will let you review from page 1 to page 5 and then ends all process:
+        ```
+        .....
+        2019-04-08 11:41:49.435[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - Default Loggers started
+        2019-04-08 11:41:49.468[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - Start process in Akka Scheduler Example
+        2019-04-08 11:41:51.404[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p1.html
+        2019-04-08 11:41:51.430[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p3.html
+        2019-04-08 11:41:51.459[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-6] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p4.html
+        2019-04-08 11:41:51.974[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-7] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p5.html
+        2019-04-08 11:41:51.976[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p2.html
+        2019-04-08 11:41:51.980[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-7] INFO  com.ldg.actors.IOTask - Start IOTask process
+        2019-04-08 11:41:51.980[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-7] INFO  com.ldg.actors.IOTask - Stop IOTask process
+        2019-04-08 11:41:51.992[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
+        [DEBUG] [04/08/2019 11:41:51.997] [IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] [EventStream] shutting down: StandardOutLogger started
+        2019-04-08 11:41:51.997[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+        [DEBUG] [04/08/2019 11:41:51.999] [IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] [EventStream] all default loggers stopped
+
+       ```        
     - **sbt "AkkaSchedulerPoc/runMain com.ldg.BootScheduled"** . Description: You have to configurate the pages to review and when it must be done. Every thing in an external configuration file (root/akka-quickstart-scala/scriptsdb/cronmoviepages.conf)
 
 ## Implementation of akka example of Internet of Things ##
