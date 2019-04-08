@@ -1,4 +1,4 @@
-import BuildEnvPlugin.autoImport.configfilegenerator
+import BuildEnvPlugin.autoImport.{configfilegenerator}
 
 import CommandAkkaScheduler.buildAll
 
@@ -28,6 +28,9 @@ lazy val root = (project in file(".")).
   settings(commonSettings,commands ++= Seq(buildAll))
 
 lazy val AkkaSchedulerPoc = (project in file("modules/AkkaScheduler")).
+  enablePlugins(JavaAppPackaging).
   settings(commonSettings,libraryDependencies ++= Seq(
     "com.enragedginger" %% "akka-quartz-scheduler" % "1.6.1-akka-2.5.x"
  ),resourceGenerators in Compile += configfilegenerator)
+
+fork in run := true

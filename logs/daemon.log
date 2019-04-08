@@ -284,3 +284,430 @@ java.lang.InterruptedException: null
 2018-09-20 14:05:41.140[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IOTask - Stop IOTask process
 2018-09-20 14:05:41.150[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
 2018-09-20 14:05:41.155[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2019-04-07 11:17:45.027[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2019-04-07 11:17:45.039[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2019-04-07 11:17:45.043[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - Default Loggers started
+2019-04-07 11:17:45.091[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine started
+2019-04-07 11:17:45.099[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] ERROR akka.actor.OneForOneStrategy - No configuration setting found for key 'akka.testinclude'
+akka.actor.ActorInitializationException: akka://IotAdmin_Scheduled/user/SheduledDaemon_moviepage_processing: exception during creation
+	at akka.actor.ActorInitializationException$.apply(Actor.scala:193)
+	at akka.actor.ActorCell.create(ActorCell.scala:608)
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:462)
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:484)
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:282)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:223)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.typesafe.config.ConfigException$Missing: No configuration setting found for key 'akka.testinclude'
+	at com.typesafe.config.impl.SimpleConfig.findKeyOrNull(SimpleConfig.java:152)
+	at com.typesafe.config.impl.SimpleConfig.findOrNull(SimpleConfig.java:170)
+	at com.typesafe.config.impl.SimpleConfig.findOrNull(SimpleConfig.java:176)
+	at com.typesafe.config.impl.SimpleConfig.find(SimpleConfig.java:184)
+	at com.typesafe.config.impl.SimpleConfig.find(SimpleConfig.java:189)
+	at com.typesafe.config.impl.SimpleConfig.getString(SimpleConfig.java:246)
+	at com.ldg.actors.IoTAdmin.<init>(IoTAdmin.scala:52)
+	at com.ldg.actors.IoTAdmin$.$anonfun$props$1(IoTAdmin.scala:16)
+	at akka.actor.TypedCreatorFunctionConsumer.produce(IndirectActorProducer.scala:87)
+	at akka.actor.Props.newActor(Props.scala:213)
+	at akka.actor.ActorCell.newActor(ActorCell.scala:563)
+	at akka.actor.ActorCell.create(ActorCell.scala:589)
+	... 9 common frames omitted
+2019-04-07 11:17:45.131[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Configured Schedules: Map(MOVIEPAGES -> com.typesafe.akka.extension.quartz.QuartzCronSchedule@579367f9)
+2019-04-07 11:17:45.162[run-main-0] INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-04-07 11:17:45.162[run-main-0] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.3 created.
+2019-04-07 11:17:45.167[run-main-0] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2019-04-07 11:17:45.169[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'QuartzScheduler~IotAdmin_Scheduled' with instanceId 'IotAdmin_Scheduled'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 1 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-07 11:17:45.169[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler 'QuartzScheduler~IotAdmin_Scheduled
+2019-04-07 11:17:45.169[run-main-0] INFO  o.quartz.impl.DirectSchedulerFactory - Quartz scheduler version: 2.2.3
+2019-04-07 11:17:45.171[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Initialized a Quartz Scheduler 'org.quartz.impl.StdScheduler@2adec549'
+2019-04-07 11:17:45.171[run-main-0] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled started.
+2019-04-07 11:17:45.171[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2019-04-07 11:17:45.180[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  c.t.a.e.q.QuartzSchedulerExtension - Setting up scheduled job 'moviepages', with 'com.typesafe.akka.extension.quartz.QuartzCronSchedule@579367f9'
+2019-04-07 11:17:45.190[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Adding jobKey DEFAULT.moviepages_Job to runningJobs map.
+2019-04-07 11:17:45.197[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Building Trigger with startDate 'Sun Apr 07 11:17:45 BST 2019
+2019-04-07 11:17:45.205[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG c.t.a.e.q.QuartzSchedulerExtension - Scheduling Job 'JobDetail 'DEFAULT.moviepages_Job':  jobClass: 'com.typesafe.akka.extension.quartz.SimpleActorMessageJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false' and Trigger 'Trigger 'DEFAULT.moviepages_Trigger':  triggerClass: 'org.quartz.impl.triggers.CronTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null'. Is Scheduler Running? true
+2019-04-07 11:17:45.209[QuartzScheduler~IotAdmin_Scheduled_QuartzSchedulerThread] DEBUG o.quartz.core.QuartzSchedulerThread - batch acquisition of 0 triggers
+2019-04-07 11:18:02.706[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] INFO  akka.actor.CoordinatedShutdown - Starting coordinated shutdown from JVM shutdown hook
+2019-04-07 11:18:02.715[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-service-unbind] with [0] tasks
+2019-04-07 11:18:02.722[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-unbind] with [0] tasks
+2019-04-07 11:18:02.723[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-requests-done] with [0] tasks
+2019-04-07 11:18:02.723[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-stop] with [0] tasks
+2019-04-07 11:18:02.723[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-cluster-shutdown] with [0] tasks
+2019-04-07 11:18:02.723[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-sharding-shutdown-region] with [0] tasks
+2019-04-07 11:18:02.724[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-leave] with [0] tasks
+2019-04-07 11:18:02.725[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting] with [0] tasks
+2019-04-07 11:18:02.725[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting-done] with [0] tasks
+2019-04-07 11:18:02.726[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-shutdown] with [0] tasks
+2019-04-07 11:18:02.726[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-actor-system-terminate] with [0] tasks
+2019-04-07 11:18:02.727[IotAdmin_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [actor-system-terminate] with [1] tasks: [terminate-system]
+2019-04-07 11:18:02.731[IotAdmin_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.ReSchedulingJob - Scheduling engine stopped
+2019-04-07 11:18:02.745[IotAdmin_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2019-04-07 11:18:02.752[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutting down.
+2019-04-07 11:18:02.752[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled paused.
+2019-04-07 11:18:02.753[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] DEBUG org.quartz.simpl.SimpleThreadPool - Shutting down threadpool...
+2019-04-07 11:18:02.761[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] DEBUG org.quartz.simpl.SimpleThreadPool - Shutdown of threadpool complete.
+2019-04-07 11:18:02.762[IotAdmin_Scheduled-akka.actor.default-dispatcher-6] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler~IotAdmin_Scheduled_$_IotAdmin_Scheduled shutdown complete.
+2019-04-07 12:26:35.522[run-main-0] ERROR com.ldg.BootNotScheduled$ - Error with the boundaries of your page numbers,reviews your parameters java.lang.ArrayIndexOutOfBoundsException: 0
+2019-04-07 12:26:48.759[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2019-04-07 12:26:48.768[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2019-04-07 12:26:48.771[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - Default Loggers started
+2019-04-07 12:26:48.808[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] ERROR akka.actor.OneForOneStrategy - No configuration setting found for key 'akka.testinclude'
+akka.actor.ActorInitializationException: akka://IotAdmin_Not_Scheduled/user/NotSheduledDaemon_moviepage_processing: exception during creation
+	at akka.actor.ActorInitializationException$.apply(Actor.scala:193)
+	at akka.actor.ActorCell.create(ActorCell.scala:608)
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:462)
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:484)
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:282)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:223)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.typesafe.config.ConfigException$Missing: No configuration setting found for key 'akka.testinclude'
+	at com.typesafe.config.impl.SimpleConfig.findKeyOrNull(SimpleConfig.java:152)
+	at com.typesafe.config.impl.SimpleConfig.findOrNull(SimpleConfig.java:170)
+	at com.typesafe.config.impl.SimpleConfig.findOrNull(SimpleConfig.java:176)
+	at com.typesafe.config.impl.SimpleConfig.find(SimpleConfig.java:184)
+	at com.typesafe.config.impl.SimpleConfig.find(SimpleConfig.java:189)
+	at com.typesafe.config.impl.SimpleConfig.getString(SimpleConfig.java:246)
+	at com.ldg.actors.IoTAdmin.<init>(IoTAdmin.scala:52)
+	at com.ldg.actors.IoTAdmin$.$anonfun$props$1(IoTAdmin.scala:16)
+	at akka.actor.TypedCreatorFunctionConsumer.produce(IndirectActorProducer.scala:87)
+	at akka.actor.Props.newActor(Props.scala:213)
+	at akka.actor.ActorCell.newActor(ActorCell.scala:563)
+	at akka.actor.ActorCell.create(ActorCell.scala:589)
+	... 9 common frames omitted
+2019-04-07 12:26:48.810[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  akka.actor.RepointableActorRef - Message [com.ldg.actors.IoTAdmin$ParseUrlFilms] without sender to Actor[akka://IotAdmin_Not_Scheduled/user/NotSheduledDaemon_moviepage_processing#1582784674] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2019-04-07 12:27:55.190[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  akka.actor.CoordinatedShutdown - Starting coordinated shutdown from JVM shutdown hook
+2019-04-07 12:27:55.199[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-service-unbind] with [0] tasks
+2019-04-07 12:27:55.204[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-unbind] with [0] tasks
+2019-04-07 12:27:55.205[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-requests-done] with [0] tasks
+2019-04-07 12:27:55.206[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-stop] with [0] tasks
+2019-04-07 12:27:55.206[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-cluster-shutdown] with [0] tasks
+2019-04-07 12:27:55.206[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-sharding-shutdown-region] with [0] tasks
+2019-04-07 12:27:55.207[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-leave] with [0] tasks
+2019-04-07 12:27:55.207[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting] with [0] tasks
+2019-04-07 12:27:55.207[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting-done] with [0] tasks
+2019-04-07 12:27:55.207[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-shutdown] with [0] tasks
+2019-04-07 12:27:55.208[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-actor-system-terminate] with [0] tasks
+2019-04-07 12:27:55.210[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [actor-system-terminate] with [1] tasks: [terminate-system]
+2019-04-07 12:27:55.220[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2019-04-08 10:59:15.535[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2019-04-08 10:59:15.546[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2019-04-08 10:59:15.550[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - Default Loggers started
+2019-04-08 10:59:15.599[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] ERROR akka.actor.OneForOneStrategy - No configuration setting found for key 'akka.testinclude'
+akka.actor.ActorInitializationException: akka://IotAdmin_Not_Scheduled/user/NotSheduledDaemon_moviepage_processing: exception during creation
+	at akka.actor.ActorInitializationException$.apply(Actor.scala:193)
+	at akka.actor.ActorCell.create(ActorCell.scala:608)
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:462)
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:484)
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:282)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:223)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.typesafe.config.ConfigException$Missing: No configuration setting found for key 'akka.testinclude'
+	at com.typesafe.config.impl.SimpleConfig.findKeyOrNull(SimpleConfig.java:152)
+	at com.typesafe.config.impl.SimpleConfig.findOrNull(SimpleConfig.java:170)
+	at com.typesafe.config.impl.SimpleConfig.findOrNull(SimpleConfig.java:176)
+	at com.typesafe.config.impl.SimpleConfig.find(SimpleConfig.java:184)
+	at com.typesafe.config.impl.SimpleConfig.find(SimpleConfig.java:189)
+	at com.typesafe.config.impl.SimpleConfig.getString(SimpleConfig.java:246)
+	at com.ldg.actors.IoTAdmin.<init>(IoTAdmin.scala:52)
+	at com.ldg.actors.IoTAdmin$.$anonfun$props$1(IoTAdmin.scala:16)
+	at akka.actor.TypedCreatorFunctionConsumer.produce(IndirectActorProducer.scala:87)
+	at akka.actor.Props.newActor(Props.scala:213)
+	at akka.actor.ActorCell.newActor(ActorCell.scala:563)
+	at akka.actor.ActorCell.create(ActorCell.scala:589)
+	... 9 common frames omitted
+2019-04-08 10:59:15.601[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  akka.actor.RepointableActorRef - Message [com.ldg.actors.IoTAdmin$ParseUrlFilms] without sender to Actor[akka://IotAdmin_Not_Scheduled/user/NotSheduledDaemon_moviepage_processing#-442743010] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2019-04-08 10:59:25.479[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] INFO  akka.actor.CoordinatedShutdown - Starting coordinated shutdown from JVM shutdown hook
+2019-04-08 10:59:25.489[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-service-unbind] with [0] tasks
+2019-04-08 10:59:25.497[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-unbind] with [0] tasks
+2019-04-08 10:59:25.497[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-requests-done] with [0] tasks
+2019-04-08 10:59:25.497[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-stop] with [0] tasks
+2019-04-08 10:59:25.498[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-cluster-shutdown] with [0] tasks
+2019-04-08 10:59:25.498[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-sharding-shutdown-region] with [0] tasks
+2019-04-08 10:59:25.498[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-leave] with [0] tasks
+2019-04-08 10:59:25.499[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting] with [0] tasks
+2019-04-08 10:59:25.511[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting-done] with [0] tasks
+2019-04-08 10:59:25.511[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-shutdown] with [0] tasks
+2019-04-08 10:59:25.511[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-actor-system-terminate] with [0] tasks
+2019-04-08 10:59:25.511[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [actor-system-terminate] with [1] tasks: [terminate-system]
+2019-04-08 10:59:25.514[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2019-04-08 10:59:44.874[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2019-04-08 10:59:44.884[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2019-04-08 10:59:44.887[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - Default Loggers started
+2019-04-08 10:59:44.925[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] ERROR akka.actor.OneForOneStrategy - No configuration setting found for key 'akka.testinclude'
+akka.actor.ActorInitializationException: akka://IotAdmin_Not_Scheduled/user/NotSheduledDaemon_moviepage_processing: exception during creation
+	at akka.actor.ActorInitializationException$.apply(Actor.scala:193)
+	at akka.actor.ActorCell.create(ActorCell.scala:608)
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:462)
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:484)
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:282)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:223)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.typesafe.config.ConfigException$Missing: No configuration setting found for key 'akka.testinclude'
+	at com.typesafe.config.impl.SimpleConfig.findKeyOrNull(SimpleConfig.java:152)
+	at com.typesafe.config.impl.SimpleConfig.findOrNull(SimpleConfig.java:170)
+	at com.typesafe.config.impl.SimpleConfig.findOrNull(SimpleConfig.java:176)
+	at com.typesafe.config.impl.SimpleConfig.find(SimpleConfig.java:184)
+	at com.typesafe.config.impl.SimpleConfig.find(SimpleConfig.java:189)
+	at com.typesafe.config.impl.SimpleConfig.getString(SimpleConfig.java:246)
+	at com.ldg.actors.IoTAdmin.<init>(IoTAdmin.scala:52)
+	at com.ldg.actors.IoTAdmin$.$anonfun$props$1(IoTAdmin.scala:16)
+	at akka.actor.TypedCreatorFunctionConsumer.produce(IndirectActorProducer.scala:87)
+	at akka.actor.Props.newActor(Props.scala:213)
+	at akka.actor.ActorCell.newActor(ActorCell.scala:563)
+	at akka.actor.ActorCell.create(ActorCell.scala:589)
+	... 9 common frames omitted
+2019-04-08 10:59:44.927[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] INFO  akka.actor.RepointableActorRef - Message [com.ldg.actors.IoTAdmin$ParseUrlFilms] without sender to Actor[akka://IotAdmin_Not_Scheduled/user/NotSheduledDaemon_moviepage_processing#1226809328] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+2019-04-08 11:00:03.638[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  akka.actor.CoordinatedShutdown - Starting coordinated shutdown from JVM shutdown hook
+2019-04-08 11:00:03.646[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-service-unbind] with [0] tasks
+2019-04-08 11:00:03.653[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-unbind] with [0] tasks
+2019-04-08 11:00:03.653[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-requests-done] with [0] tasks
+2019-04-08 11:00:03.653[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [service-stop] with [0] tasks
+2019-04-08 11:00:03.654[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-cluster-shutdown] with [0] tasks
+2019-04-08 11:00:03.654[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-sharding-shutdown-region] with [0] tasks
+2019-04-08 11:00:03.654[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-leave] with [0] tasks
+2019-04-08 11:00:03.655[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting] with [0] tasks
+2019-04-08 11:00:03.664[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-exiting-done] with [0] tasks
+2019-04-08 11:00:03.665[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [cluster-shutdown] with [0] tasks
+2019-04-08 11:00:03.666[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [before-actor-system-terminate] with [0] tasks
+2019-04-08 11:00:03.666[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.actor.CoordinatedShutdown - Performing phase [actor-system-terminate] with [1] tasks: [terminate-system]
+2019-04-08 11:00:03.668[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2019-04-08 11:12:44.612[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2019-04-08 11:12:44.618[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2019-04-08 11:12:44.621[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - Default Loggers started
+2019-04-08 11:12:44.639[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - Start process in Akka Scheduler Example
+2019-04-08 11:12:47.800[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-14] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p2.html
+2019-04-08 11:12:47.800[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-14] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p3.html
+2019-04-08 11:12:47.801[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-14] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p6.html
+2019-04-08 11:12:47.801[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-14] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p7.html
+2019-04-08 11:12:47.801[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-14] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p11.html
+2019-04-08 11:12:57.298[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p8.html
+2019-04-08 11:12:57.298[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p14.html
+2019-04-08 11:12:57.298[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p5.html
+2019-04-08 11:12:57.299[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p16.html
+2019-04-08 11:12:57.299[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p0.html
+2019-04-08 11:12:57.302[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p13.html
+2019-04-08 11:12:57.302[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p22.html
+2019-04-08 11:12:57.303[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p1.html
+2019-04-08 11:12:57.303[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p15.html
+2019-04-08 11:12:57.303[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p17.html
+2019-04-08 11:12:57.320[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p4.html
+2019-04-08 11:12:57.321[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p9.html
+2019-04-08 11:12:57.321[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p12.html
+2019-04-08 11:12:57.321[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p10.html
+2019-04-08 11:12:57.321[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p19.html
+2019-04-08 11:12:57.322[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p20.html
+2019-04-08 11:12:57.322[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p23.html
+2019-04-08 11:12:57.322[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p18.html
+2019-04-08 11:12:57.323[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p21.html
+2019-04-08 11:12:57.323[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p25.html
+2019-04-08 11:12:57.323[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p24.html
+2019-04-08 11:12:57.323[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p27.html
+2019-04-08 11:12:57.324[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p26.html
+2019-04-08 11:12:57.324[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p30.html
+2019-04-08 11:12:57.334[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p31.html
+2019-04-08 11:12:57.334[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p28.html
+2019-04-08 11:12:57.334[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p29.html
+2019-04-08 11:12:57.335[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p33.html
+2019-04-08 11:12:57.335[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p35.html
+2019-04-08 11:12:57.335[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p32.html
+2019-04-08 11:12:57.335[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p38.html
+2019-04-08 11:12:57.354[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p37.html
+2019-04-08 11:12:57.355[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p34.html
+2019-04-08 11:12:57.355[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p46.html
+2019-04-08 11:12:57.355[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p42.html
+2019-04-08 11:12:57.355[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p36.html
+2019-04-08 11:12:57.355[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p41.html
+2019-04-08 11:12:57.355[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p43.html
+2019-04-08 11:12:57.356[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p47.html
+2019-04-08 11:12:57.356[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p40.html
+2019-04-08 11:12:57.356[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p44.html
+2019-04-08 11:12:57.356[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p39.html
+2019-04-08 11:12:57.356[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p45.html
+2019-04-08 11:12:57.356[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p48.html
+2019-04-08 11:12:57.357[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p56.html
+2019-04-08 11:12:57.357[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p49.html
+2019-04-08 11:12:57.357[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p55.html
+2019-04-08 11:12:57.357[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p51.html
+2019-04-08 11:12:57.357[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p57.html
+2019-04-08 11:12:57.358[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p50.html
+2019-04-08 11:12:57.358[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p58.html
+2019-04-08 11:12:57.359[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p53.html
+2019-04-08 11:12:57.359[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p52.html
+2019-04-08 11:12:57.359[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p54.html
+2019-04-08 11:12:57.359[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p59.html
+2019-04-08 11:12:57.360[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p64.html
+2019-04-08 11:12:57.360[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p60.html
+2019-04-08 11:12:57.360[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p61.html
+2019-04-08 11:12:57.360[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p62.html
+2019-04-08 11:12:57.360[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p69.html
+2019-04-08 11:12:57.384[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p68.html
+2019-04-08 11:12:57.385[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p63.html
+2019-04-08 11:12:57.385[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p65.html
+2019-04-08 11:12:57.385[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p66.html
+2019-04-08 11:12:57.385[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p67.html
+2019-04-08 11:12:57.385[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p72.html
+2019-04-08 11:12:57.385[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p70.html
+2019-04-08 11:12:57.386[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p71.html
+2019-04-08 11:12:57.386[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p74.html
+2019-04-08 11:12:57.386[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p76.html
+2019-04-08 11:12:57.386[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p73.html
+2019-04-08 11:12:57.386[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p80.html
+2019-04-08 11:12:57.386[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p81.html
+2019-04-08 11:12:57.386[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p82.html
+2019-04-08 11:12:57.490[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-11] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p75.html
+2019-04-08 11:12:57.893[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-25] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p77.html
+2019-04-08 11:12:58.250[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-11] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p79.html
+2019-04-08 11:12:58.342[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-18] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p85.html
+2019-04-08 11:12:58.352[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-11] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p83.html
+2019-04-08 11:12:58.509[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p84.html
+2019-04-08 11:12:58.519[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-11] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p87.html
+2019-04-08 11:12:58.544[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p88.html
+2019-04-08 11:12:58.557[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-22] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p92.html
+2019-04-08 11:12:58.568[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-15] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p91.html
+2019-04-08 11:12:58.608[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-16] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p86.html
+2019-04-08 11:12:58.761[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-12] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p89.html
+2019-04-08 11:12:58.767[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-24] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p93.html
+2019-04-08 11:12:58.792[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-12] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p96.html
+2019-04-08 11:12:58.864[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-13] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p90.html
+2019-04-08 11:12:58.888[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p97.html
+2019-04-08 11:12:58.899[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-13] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p78.html
+2019-04-08 11:12:58.934[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-6] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p94.html
+2019-04-08 11:12:58.991[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-7] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p95.html
+2019-04-08 11:12:59.159[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-8] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p100.html
+2019-04-08 11:12:59.224[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-9] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p98.html
+2019-04-08 11:12:59.416[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p99.html
+2019-04-08 11:12:59.420[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-9] INFO  com.ldg.actors.IOTask - Start IOTask process
+2019-04-08 11:12:59.421[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-8] INFO  com.ldg.actors.IOTask - Stop IOTask process
+2019-04-08 11:12:59.431[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
+2019-04-08 11:12:59.433[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+2019-04-08 11:14:43.556[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+2019-04-08 11:14:43.561[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+2019-04-08 11:14:43.563[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - Default Loggers started
+2019-04-08 11:14:43.579[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] INFO  com.ldg.actors.IoTAdmin - Start process in Akka Scheduler Example
+2019-04-08 11:14:45.184[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-12] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p9.html
+2019-04-08 11:14:46.164[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-21] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p3.html
+2019-04-08 11:14:46.165[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-21] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p2.html
+2019-04-08 11:14:55.819[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p5.html
+2019-04-08 11:14:55.819[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p17.html
+2019-04-08 11:14:55.819[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p0.html
+2019-04-08 11:14:55.820[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p18.html
+2019-04-08 11:14:55.820[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p6.html
+2019-04-08 11:14:55.824[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p15.html
+2019-04-08 11:14:55.824[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p7.html
+2019-04-08 11:14:55.824[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p11.html
+2019-04-08 11:14:55.824[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p1.html
+2019-04-08 11:14:55.825[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p14.html
+2019-04-08 11:14:55.825[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p22.html
+2019-04-08 11:14:55.825[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p21.html
+2019-04-08 11:14:55.825[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p20.html
+2019-04-08 11:14:55.825[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p16.html
+2019-04-08 11:14:55.826[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p13.html
+2019-04-08 11:14:55.826[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p10.html
+2019-04-08 11:14:55.826[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p23.html
+2019-04-08 11:14:55.826[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p8.html
+2019-04-08 11:14:55.827[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p19.html
+2019-04-08 11:14:55.827[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p12.html
+2019-04-08 11:14:55.827[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p27.html
+2019-04-08 11:14:55.846[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p26.html
+2019-04-08 11:14:55.846[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p30.html
+2019-04-08 11:14:55.847[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p36.html
+2019-04-08 11:14:55.847[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p24.html
+2019-04-08 11:14:55.847[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p28.html
+2019-04-08 11:14:55.847[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p39.html
+2019-04-08 11:14:55.847[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p31.html
+2019-04-08 11:14:55.847[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p25.html
+2019-04-08 11:14:55.847[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p32.html
+2019-04-08 11:14:55.847[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p35.html
+2019-04-08 11:14:55.847[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p34.html
+2019-04-08 11:14:55.848[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p41.html
+2019-04-08 11:14:55.848[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p43.html
+2019-04-08 11:14:55.848[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p33.html
+2019-04-08 11:14:55.848[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p37.html
+2019-04-08 11:14:55.848[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p40.html
+2019-04-08 11:14:55.849[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p38.html
+2019-04-08 11:14:55.849[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p45.html
+2019-04-08 11:14:55.849[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p42.html
+2019-04-08 11:14:55.849[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p46.html
+2019-04-08 11:14:55.849[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p29.html
+2019-04-08 11:14:55.849[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p44.html
+2019-04-08 11:14:55.849[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p47.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p48.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p49.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p51.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p52.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p50.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p60.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p53.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p54.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p55.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p58.html
+2019-04-08 11:14:55.850[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p63.html
+2019-04-08 11:14:55.851[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p59.html
+2019-04-08 11:14:55.851[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p57.html
+2019-04-08 11:14:55.851[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p56.html
+2019-04-08 11:14:55.851[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p61.html
+2019-04-08 11:14:55.851[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p69.html
+2019-04-08 11:14:55.851[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p66.html
+2019-04-08 11:14:55.851[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p68.html
+2019-04-08 11:14:55.851[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p4.html
+2019-04-08 11:14:55.852[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p62.html
+2019-04-08 11:14:55.852[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p65.html
+2019-04-08 11:14:55.852[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p64.html
+2019-04-08 11:14:55.852[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p67.html
+2019-04-08 11:14:55.852[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p80.html
+2019-04-08 11:14:55.852[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p76.html
+2019-04-08 11:14:55.852[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p73.html
+2019-04-08 11:14:55.852[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p82.html
+2019-04-08 11:14:55.853[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p70.html
+2019-04-08 11:14:55.853[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p74.html
+2019-04-08 11:14:55.853[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p78.html
+2019-04-08 11:14:55.853[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p81.html
+2019-04-08 11:14:55.853[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-19] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p72.html
+2019-04-08 11:14:55.858[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-21] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p79.html
+2019-04-08 11:14:55.877[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-17] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p75.html
+2019-04-08 11:14:55.917[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-23] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p77.html
+2019-04-08 11:14:56.392[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-10] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p85.html
+2019-04-08 11:14:56.433[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-23] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p89.html
+2019-04-08 11:14:56.475[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-10] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p86.html
+2019-04-08 11:14:56.549[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-23] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p88.html
+2019-04-08 11:14:56.583[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-10] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p84.html
+2019-04-08 11:14:56.584[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-25] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p90.html
+2019-04-08 11:14:56.677[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p83.html
+2019-04-08 11:14:56.757[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-13] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p87.html
+2019-04-08 11:14:57.341[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-5] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p71.html
+2019-04-08 11:14:57.364[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-24] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p91.html
+2019-04-08 11:14:57.468[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-15] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p93.html
+2019-04-08 11:14:57.682[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-2] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p95.html
+2019-04-08 11:14:57.796[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-14] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p94.html
+2019-04-08 11:14:57.926[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-16] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p97.html
+2019-04-08 11:14:57.957[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-14] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p100.html
+2019-04-08 11:14:57.960[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-8] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p98.html
+2019-04-08 11:14:58.036[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-12] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p96.html
+2019-04-08 11:14:58.134[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-20] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p99.html
+2019-04-08 11:14:58.316[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-22] INFO  com.ldg.actors.IoTAdmin - An operation have done. applicationInDevelopment moviePageTitle:Películas y Series en versión original moviePageUrl:http://mejorenvo.com/p92.html
+2019-04-08 11:14:58.319[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-20] INFO  com.ldg.actors.IOTask - Start IOTask process
+2019-04-08 11:14:58.319[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-12] INFO  com.ldg.actors.IOTask - Stop IOTask process
+2019-04-08 11:14:58.326[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-22] INFO  com.ldg.actors.IoTAdmin - Stop process in Akka Schedule Example
+2019-04-08 11:14:58.328[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-22] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started

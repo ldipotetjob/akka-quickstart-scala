@@ -49,7 +49,7 @@ class IoTAdmin extends Actor with ActorLogging with MessageToTargetActors{
 
   val conf = ConfigFactory.load()
 
-  val includeconf:String= conf.getString("akka.testinclude")
+  val includeconf:String= conf.getString("akka.keyvalue")
 
 
   override def receive = {
