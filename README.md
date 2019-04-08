@@ -51,6 +51,7 @@ What is my problem?: I have several tasks that need to execute following an spec
         [DEBUG] [04/08/2019 11:41:51.997] [IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] [EventStream] shutting down: StandardOutLogger started
         2019-04-08 11:41:51.997[IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
         [DEBUG] [04/08/2019 11:41:51.999] [IotAdmin_Not_Scheduled-akka.actor.default-dispatcher-3] [EventStream] all default loggers stopped
+        [success] Total time: 4 s, completed 08-abr-2019 11:41:52
 
        ```        
     - **sbt "AkkaSchedulerPoc/runMain com.ldg.BootScheduled"** . Description: You have to configurate the pages to review and when it must be done. Every thing in an external configuration file (root/akka-quickstart-scala/scriptsdb/cronmoviepages.conf)
