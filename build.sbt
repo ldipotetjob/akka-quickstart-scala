@@ -27,6 +27,14 @@ lazy val root = (project in file(".")).
   aggregate(AkkaSchedulerPoc).
   settings(commonSettings,commands ++= Seq(buildAll))
 
+/**
+  *
+  * A global setting onLoad is of type State => State and is executed once, after all projects are built and loaded.
+  * So after every thing have been load we seet root as a main project inthis multiproject
+ */
+
+onLoad in Global ~= (_ andThen ("project root" :: _))
+
 lazy val AkkaSchedulerPoc = (project in file("modules/AkkaScheduler")).
   enablePlugins(JavaAppPackaging).
   settings(commonSettings,libraryDependencies ++= Seq(
